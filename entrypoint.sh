@@ -9,6 +9,8 @@ echo "::notice file=entrypoint.sh,line=7::$GREETING"
 # Write outputs to the $GITHUB_OUTPUT file
 echo "time=$(date)" >>"$GITHUB_OUTPUT"
 
+apk add curl
+
 curl https://example.com
 
 exit 0
